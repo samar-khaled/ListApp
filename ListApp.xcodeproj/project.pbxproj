@@ -30,11 +30,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		61683F042D36DF6C0004D87C /* ListApp */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ListApp;
-			sourceTree = "<group>";
-		};
 		61683F172D36DF6E0004D87C /* ListAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ListAppTests;
@@ -43,6 +38,11 @@
 		61683F212D36DF6E0004D87C /* ListAppUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ListAppUITests;
+			sourceTree = "<group>";
+		};
+		61683F442D36E0560004D87C /* ListApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ListApp;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,7 +75,7 @@
 		61683EF92D36DF6C0004D87C = {
 			isa = PBXGroup;
 			children = (
-				61683F042D36DF6C0004D87C /* ListApp */,
+				61683F442D36E0560004D87C /* ListApp */,
 				61683F172D36DF6E0004D87C /* ListAppTests */,
 				61683F212D36DF6E0004D87C /* ListAppUITests */,
 				61683F032D36DF6C0004D87C /* Products */,
@@ -108,7 +108,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				61683F042D36DF6C0004D87C /* ListApp */,
+				61683F442D36E0560004D87C /* ListApp */,
 			);
 			name = ListApp;
 			packageProductDependencies = (
@@ -403,6 +403,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,7 +412,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SamarKhaled.ListApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -431,6 +432,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -439,7 +441,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SamarKhaled.ListApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
