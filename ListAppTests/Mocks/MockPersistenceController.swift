@@ -8,18 +8,36 @@ import CoreData
 @testable import ListApp
 
 final class MockPersistenceController: PersistenceManaging {
-    private var countries: [CountryEntity] = []
 
-    func fetchCountries() -> [CountryEntity] {
-        return countries
+    private var context: NSManagedObjectContext
+
+    init(context: NSManagedObjectContext) {
+        self.context = context
     }
 
+    // Fetch objects properly within the context
+    func fetchCountries() -> [CountryEntity] {
+        let fetchRequest: NSFetchRequest<CountryEntity> = CountryEntity.fetchRequest()
+        do {
+            return try context.fetch(fetchRequest)
+        } catch {
+            print("Error fetching countries: \(error)")
+            return []
+        }
+    }
+
+    // Save objects correctly
     func saveCountries(_ countries: [Country]) {
-        self.countries = countries.map { country in
-            let entity = CountryEntity(context: NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType))
+        countries.forEach { country in
+            let entity = CountryEntity(context: context)
             entity.name = country.name.common
             entity.flag = country.flag
-            return entity
+        }
+
+        do {
+            try context.save()
+        } catch {
+            print("Error saving countries: \(error)")
         }
     }
 }
