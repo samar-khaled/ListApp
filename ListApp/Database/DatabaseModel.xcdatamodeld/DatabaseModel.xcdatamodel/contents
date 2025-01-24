@@ -2,6 +2,6 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="23H222" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
     <entity name="CountryEntity" representedClassName="CountryEntity" syncable="YES" codeGenerationType="class">
         <attribute name="flag" optional="YES" attributeType="String"/>
-        <attribute name="name" attributeType="String"/>
+        <attribute name="name" attributeType="String" spotlightIndexingEnabled="YES"/>
     </entity>
 </model>
