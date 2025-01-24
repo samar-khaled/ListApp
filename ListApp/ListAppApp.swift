@@ -14,7 +14,6 @@ struct ListAppApp: App {
     var body: some Scene {
         WindowGroup {
             CountryListView(viewModel: CountryViewModel(persistenceController: persistenceController))
-                .environment(\.managedObjectContext, persistenceController.context)
         }
     }
 }
